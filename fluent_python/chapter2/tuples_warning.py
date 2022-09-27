@@ -7,3 +7,24 @@ for passport in sorted(traveler_ids):
 
 for country, _ in traveler_ids:
     print(country)
+
+print('-'*20)
+a=(10, 'alpha', [1,2])
+b=(10, 'alpha', [1,2])
+print(f'Comparing {a==b}')
+b[-1].append(99)
+print(f'Comparing {a==b}')
+print(f'b={b}')
+print('-'*20)
+def fixed(o):
+    try:
+        hash(o)
+    except TypeError:
+        return False
+    return True
+
+tf = (10, 'alpha', (1,2))
+tm = (10, 'alpha', [1,2])
+print(f'fixed(tf)={fixed(tf)}')
+print(f'fixed(tm)={fixed(tm)}')
+    
